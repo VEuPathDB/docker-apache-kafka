@@ -1,0 +1,84 @@
+= Containerized Apache Kafka
+:source-highlighter: highlightjs
+:kafka-docs-url: https://kafka.apache.org/documentation/
+
+A simple Docker image for Apache Kafka.
+
+== Configuration
+
+=== Environment
+
+==== Container Config
+
+The following options are provided as part of the Docker container and are not
+part of Apache Kafka.
+
+[%header, cols=3]
+|===
+| Option | Type | Default
+
+m| KAFKA_SERVER_PROPERTIES_FILE
+m| string
+m| /opt/kafka/server.properties
+|===
+
+==== Kafka Config (`server.properties`)
+
+All Kafka configuration options listed in the
+link:{kafka-docs-url}#brokerconfigs[official documentation] may be configured
+using environment variables.  The environment variable to set for a specific
+option may be looked up in the link:server.properties.sh[] file, or by
+performing the following mapping steps:
+
+1. Convert the property name to uppercase
+2. Replace all period (`.`) characters with underscore (`_`) characters
+3. Prepend the prefix `KAFKA_`
+
+.Property to Environment Mapping Snippet
+[source, kotlin]
+----
+fun mapPropertyNameToEnvironmentKey(property: String) =
+  "KAFKA_" + property.uppercase().replace('.', '_')
+----
+
+==== Defaults
+
+The following defaults are set if no environment variables are specified.
+
+[%header, cols="3m,7m"]
+|===
+| Property | Default
+
+| advertised.listeners
+| PLAINTEXT://localhost:9092
+
+| controller.listener.names
+| CONTROLLER
+
+| controller.quorum.voters
+| 1@localhost:9093
+
+| inter.broker.listener.name
+| PLAINTEXT
+
+| listeners
+| PLAINTEXT://:9092,CONTROLLER://:9093
+
+| log.dirs
+| /tmp/kafka
+
+| node.id
+| 1
+
+| offsets.topic.replication.factor
+| 1
+
+| process.roles
+| broker,controller
+
+| transaction.state.log.min.isr
+| 1
+
+| transaction.state.log.replication.factor
+| 1
+|===
