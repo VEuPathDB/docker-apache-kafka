@@ -29,9 +29,13 @@ part of Apache Kafka.
 m| KAFKA_SERVER_PROPERTIES_FILE
 m| string
 m| /opt/kafka/server.properties
+
+m| KAFKA_CLUSTER_ID
+m| string
+m| <random uuid>
 |===
 
-==== Kafka Config (`server.properties`)
+==== `server.properties`
 
 All Kafka configuration options listed in the
 link:{kafka-docs-url}#brokerconfigs[official documentation] may be configured
