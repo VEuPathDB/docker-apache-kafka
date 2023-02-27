@@ -17,7 +17,9 @@ else
   build_properties
 fi
 
-KAFKA_CLUSTER_ID="$(kafka-storage.sh random-uuid)"
+if [ -z "${KAFKA_CLUSTER_ID}" ]; then
+  KAFKA_CLUSTER_ID="$(kafka-storage.sh random-uuid)"
+fi
 
 kafka-storage.sh format -t "$KAFKA_CLUSTER_ID" -c "${KAFKA_SERVER_PROPERTIES_FILE}"
 
