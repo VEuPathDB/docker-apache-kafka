@@ -4,6 +4,12 @@ A simple Docker image for Apache Kafka.
 
 [On GitHub](https://github.com/Foxcapades/docker-apache-kafka)
 
+## Usage
+
+```bash
+docker run -p 9092:9092 foxcapades/apache-kafka:3.4.0
+```
+
 ## Configuration
 
 ### Environment
@@ -31,8 +37,9 @@ part of Apache Kafka.
 All Kafka configuration options listed in the
 [official documentation](https://kafka.apache.org/documentation/#brokerconfigs)
 may be configured using environment variables.  The environment variable to set
-for a specific option may be looked up in the `server.properties.sh` file, or by
-performing the following mapping steps:
+for a specific option may be looked up in the
+[server.properties.sh](https://github.com/Foxcapades/docker-apache-kafka/blob/3.4.0/server.properties.sh)
+file, or by performing the following mapping steps:
 
 1. Convert the property name to uppercase
 2. Replace all period (`.`) characters with underscore (`_`) characters

@@ -36,8 +36,9 @@ m| /opt/kafka/server.properties
 All Kafka configuration options listed in the
 link:{kafka-docs-url}#brokerconfigs[official documentation] may be configured
 using environment variables.  The environment variable to set for a specific
-option may be looked up in the link:server.properties.sh[] file, or by
-performing the following mapping steps:
+option may be looked up in the
+link:https://github.com/Foxcapades/docker-apache-kafka/blob/3.4.0/server.properties.sh[]
+file, or by performing the following mapping steps:
 
 1. Convert the property name to uppercase
 2. Replace all period (`.`) characters with underscore (`_`) characters
