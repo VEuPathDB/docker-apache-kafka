@@ -30,9 +30,14 @@ part of Apache Kafka.
     <td><code>string</code></td>
     <td><code>/opt/kafka/server.properties</code></td>
   </tr>
+  <tr>
+    <td><code>KAFKA_CLUSTER_ID</code></td>
+    <td><code>string</code></td>
+    <td><code>&lt;random uuid&gt;</code></td>
+  </tr>
 </table>
 
-#### Kafka Config (`server.properties`)
+#### `server.properties`
 
 All Kafka configuration options listed in the
 [official documentation](https://kafka.apache.org/documentation/#brokerconfigs)
