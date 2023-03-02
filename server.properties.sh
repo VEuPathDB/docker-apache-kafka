@@ -140,7 +140,7 @@ build_properties() {
   append_property "offsets.retention.minutes" "${KAFKA_OFFSETS_RETENTION_MINUTES}"
   append_property "offsets.topic.compression.codec" "${KAFKA_OFFSETS_TOPIC_COMPRESSION_CODEC}"
   append_property "offsets.topic.num.partitions" "${KAFKA_OFFSETS_TOPIC_NUM_PARTITIONS}"
-  append_property "offsets.topic.replication.factor" "${KAFKA_OFFSETS_ROPIC_REPLICATION_FACTOR}"
+  append_property "offsets.topic.replication.factor" "${KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR}"
   append_property "offsets.topic.segment.bytes" "${KAFKA_OFFSETS_TOPIC_SEGMENT_BYTES}"
   append_property "password.encoder.cipher.algorithm" "${KAFKA_PASSWORD_ENCODER_CIPHER_ALGORITHM}"
   append_property "password.encoder.iterations" "${KAFKA_PASSWORD_ENCODER_ITERATIONS}"
