@@ -17,7 +17,7 @@ else
   . configuration.defaults.sh
   . server.properties.sh
 
-  build_properties
+  build_properties "${REAL_PROPERTIES_PATH}"
 fi
 
 if [ ! -f "${FORMAT_FLAG}" ]; then
