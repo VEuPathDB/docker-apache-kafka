@@ -1,17 +1,8 @@
-= Containerized Apache Kafka
+= Containerized Apache Kafka (KRaft)
 :source-highlighter: highlightjs
 :kafka-docs-url: https://kafka.apache.org/documentation/
 
-A simple Docker image for Apache Kafka.
-
-link:https://hub.docker.com/r/foxcapades/apache-kafka[On DockerHub]
-
-== Usage
-
-[source, bash]
-----
-docker run -p 9092:9092 foxcapades/apache-kafka:3.4.0
-----
+A simple Docker image for Apache Kafka using KRaft.
 
 == Configuration
 
