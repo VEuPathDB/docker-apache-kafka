@@ -4,15 +4,6 @@
 
 A simple Docker image for Apache Kafka using KRaft.
 
-link:https://hub.docker.com/r/foxcapades/apache-kafka[On DockerHub]
-
-== Usage
-
-[source, bash]
-----
-docker run -p 9092:9092 foxcapades/apache-kafka:3.4.0
-----
-
 == Configuration
 
 === Environment
