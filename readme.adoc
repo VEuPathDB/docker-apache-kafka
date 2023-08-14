@@ -32,7 +32,7 @@ All Kafka configuration options listed in the
 link:{kafka-docs-url}#brokerconfigs[official documentation] may be configured
 using environment variables.  The environment variable to set for a specific
 option may be looked up in the
-link:https://github.com/VEuPathDB/docker-apache-kafka/blob/3.4.0/server.properties.sh[]
+link:https://github.com/VEuPathDB/docker-apache-kafka/blob/main/server.properties.sh[]
 file, or by performing the following mapping steps:
 
 1. Convert the property name to uppercase
