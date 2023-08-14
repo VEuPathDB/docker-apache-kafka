@@ -5,7 +5,7 @@ ENV KAFKA_HOME=/opt/kafka \
 
 RUN apk add --no-cache bash \
   && cd /opt \
-  && wget https://dlcdn.apache.org/kafka/3.4.0/kafka_2.13-3.4.0.tgz -O /opt/kafka.tgz \
+  && wget https://archive.apache.org/dist/kafka/3.4.0/kafka_2.13-3.4.0.tgz -O /opt/kafka.tgz \
   && tar -xf kafka.tgz \
   && rm kafka.tgz \
   && mv kafka_2.13-3.4.0 kafka
